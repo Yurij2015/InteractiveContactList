@@ -10,9 +10,13 @@ namespace InteractiveContactList
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("@31382e342e30QGScgoPzw/MTtjh4NgKPmbR5VMHN5sU+vsQUNM51YG8=");
+
             InitializeComponent();
 
-            MainPage = new SimpleLoginPage();
+            //MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
+
         }
 
         protected override void OnStart()

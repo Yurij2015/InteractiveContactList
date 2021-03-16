@@ -66,7 +66,7 @@
                         FontSize="20"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource LabelStyle}"
-                        Text="Регистрация в системе"
+                        Text="Авторизация в системе"
                         TextColor="{DynamicResource Gray-900}" />
 
                     <!--  Label to display the description of this page  -->
@@ -119,7 +119,7 @@
                         Margin="0,16"
                         Command="{Binding LoginCommand}"
                         Style="{StaticResource SfButtonStyle}"
-                        Text="LOG IN" />
+                        Text="ВОЙТИ" />
 
 
                     <Label
@@ -127,7 +127,7 @@
                         FontFamily="{StaticResource Montserrat-Medium}"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource LabelStyle}"
-                        Text="Or create an account using social media"
+                        Text="Создать аккаунт с помощью Facebook"
                         TextColor="{DynamicResource Gray-800}" />
 
                     <!--  Login through facebook account  -->
@@ -152,7 +152,7 @@
                                 <Label
                                     FontFamily="{StaticResource Montserrat-Medium}"
                                     FontSize="16"
-                                    Text="Login with Facebook"
+                                    Text="Войти с помощью Facebook"
                                     TextColor="{DynamicResource Gray-White}" />
                             </StackLayout>
                         </buttons:SfButton.Content>
@@ -178,7 +178,7 @@
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource LabelStyle}"
-                        Text="Don't have an account?"
+                        Text="Еще нет аккаунта?"
                         TextColor="{DynamicResource Gray-900}"
                         VerticalTextAlignment="Center" />
 
@@ -187,7 +187,7 @@
                         Command="{Binding SignUpCommand}"
                         CornerRadius="4"
                         Style="{StaticResource SfFlatButtonStyle}"
-                        Text="Sign Up" />
+                        Text="Регистрация" />
 
                 </StackLayout>
 

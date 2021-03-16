@@ -58,7 +58,7 @@
                         FontSize="20"
                         HorizontalOptions="Center"
                         Style="{StaticResource LabelStyle}"
-                        Text="Sign Up"
+                        Text="Регистрация"
                         TextColor="{DynamicResource Gray-900}" />
 
                     <!--  Label to display the description of this page  -->
@@ -68,7 +68,7 @@
                         FontFamily="{StaticResource Montserrat-Medium}"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource LabelStyle}"
-                        Text="Create an account to start doing more"
+                        Text="Создать аккаунт"
                         TextColor="{DynamicResource Gray-800}" />
 
                     <!--  Entry to get username from user  -->
@@ -78,7 +78,7 @@
                         Style="{StaticResource SfBorderStyle}">
                         <control:BorderlessEntry
                             x:Name="NameEntry"
-                            Placeholder="Name"
+                            Placeholder="Имя пользователя"
                             PlaceholderColor="{DynamicResource Gray-700}"
                             Style="{StaticResource EntryStyle}"
                             Text="{Binding Name}"
@@ -96,7 +96,7 @@
                         <control:BorderlessEntry
                             x:Name="PasswordEntry"
                             IsPassword="true"
-                            Placeholder="Password"
+                            Placeholder="Пароль"
                             PlaceholderColor="{DynamicResource Gray-700}"
                             Style="{StaticResource EntryStyle}"
                             Text="{Binding Password}"
@@ -111,7 +111,7 @@
                         <control:BorderlessEntry
                             x:Name="ConfirmPasswordEntry"
                             IsPassword="true"
-                            Placeholder="Confirm Password"
+                            Placeholder="Подтверждение пароля"
                             PlaceholderColor="{DynamicResource Gray-700}"
                             Style="{StaticResource EntryStyle}"
                             Text="{Binding ConfirmPassword}"
@@ -124,7 +124,7 @@
                         CornerRadius="20"
                         FontFamily="{StaticResource Montserrat-SemiBold}"
                         Style="{StaticResource SfButtonStyle}"
-                        Text="REGISTER" />
+                        Text="РЕГИСТРАЦИЯ" />
                 </StackLayout>
 
                 <StackLayout
@@ -145,7 +145,7 @@
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Center"
                         Style="{StaticResource LabelStyle}"
-                        Text="Already have an account?"
+                        Text="Уже есть аккаунт?"
                         TextColor="{DynamicResource Gray-800}"
                         VerticalTextAlignment="Center" />
 
@@ -153,7 +153,8 @@
                         Command="{Binding LoginCommand}"
                         CornerRadius="4"
                         Style="{StaticResource SfFlatButtonStyle}"
-                        Text="Log In" />
+                        Text="Войти"
+                        Clicked="SimpleLoginPage"/>
 
                 </StackLayout>
             </StackLayout>

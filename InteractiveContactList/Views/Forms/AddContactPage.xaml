@@ -31,7 +31,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="16">
-                <Label Style="{StaticResource HeaderLabelStyle}" Text="General Information" />
+                <Label Style="{StaticResource HeaderLabelStyle}" Text="Добавить контакт (задачу)" />
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -45,7 +45,7 @@
                     <border:SfBorder BorderColor="{Binding Source={x:Reference FirstNameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                         <control:BorderlessEntry
                             x:Name="FirstNameEntry"
-                            Placeholder="First Name" Text="{Binding FirstName}"
+                            Placeholder="Имя" Text="{Binding FirstName}"
                             Style="{StaticResource EntryTextStyle}" />
                     </border:SfBorder>
                     <border:SfBorder
@@ -54,7 +54,7 @@
                         Style="{StaticResource FormBorderStyle}">
                         <control:BorderlessEntry
                             x:Name="LastNameEntry"
-                            Placeholder="Last Name" Text="{Binding LastName}"
+                            Placeholder="Фамилия" Text="{Binding LastName}"
                             Style="{StaticResource EntryTextStyle}" />
                     </border:SfBorder>
                     <border:SfBorder
@@ -67,7 +67,7 @@
                             FontFamily="{StaticResource Montserrat-Regular}"
                             FontSize="16"
                             Format="dd/MM/yy"
-                            PlaceHolderText="DD/MM/YY"
+                            PlaceHolderText="Дата рождения"
                             TextColor="{DynamicResource Gray-900}" />
 
                     </border:SfBorder>
@@ -80,11 +80,11 @@
                         <combobox:SfComboBox
                             x:Name="GenderPicker" SelectedValue="{Binding Gender, Mode=TwoWay}"
                             Style="{StaticResource ComboBoxStyle}"
-                            Watermark="Gender">
+                            Watermark="Пол">
                             <combobox:SfComboBox.ComboBoxSource>
                                 <ListCollection:List x:TypeArguments="x:String">
-                                    <x:String>Male</x:String>
-                                    <x:String>Female</x:String>
+                                    <x:String>Мужской</x:String>
+                                    <x:String>Женский</x:String>
                                 </ListCollection:List>
                             </combobox:SfComboBox.ComboBoxSource>
                             <combobox:SfComboBox.DropDownButtonSettings>
@@ -107,13 +107,38 @@
                 <Label
                     Margin="0,16,0,0"
                     Style="{StaticResource HeaderLabelStyle}"
-                    Text="Contact Information" />
+                    Text="Контактная информация" />
                 <local:ContactEmailEntry /> 
                
                 <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
                         x:Name="AddressEntry"
-                        Placeholder="Address" Text="{Binding Address}"
+                        Placeholder="Адрес" Text="{Binding Address}"
+                        Style="{StaticResource EntryTextStyle}" />
+                </border:SfBorder>
+                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                    <control:BorderlessEntry
+                        Placeholder="Ссылка на профиль Facebook" Text="{Binding Address}"
+                        Style="{StaticResource EntryTextStyle}" />
+                </border:SfBorder>
+                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                    <control:BorderlessEntry
+                        Placeholder="Ссылка на профиль Instagram" Text="{Binding Address}"
+                        Style="{StaticResource EntryTextStyle}" />
+                </border:SfBorder>
+                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                    <control:BorderlessEntry
+                        Placeholder="Ссылка на профиль Vk.com" Text="{Binding Address}"
+                        Style="{StaticResource EntryTextStyle}" />
+                </border:SfBorder>
+                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                    <control:BorderlessEntry
+                        Placeholder="Ссылка на профиль LinkedIn" Text="{Binding Address}"
+                        Style="{StaticResource EntryTextStyle}" />
+                </border:SfBorder>
+                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                    <control:BorderlessEntry
+                        Placeholder="Ссылка на профиль Twitter" Text="{Binding Address}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
                 <border:SfBorder
@@ -123,7 +148,7 @@
                     Style="{StaticResource FormBorderStyle}">
                     <control:CountryComboBox
                         x:Name="CountryPicker" 
-                        Style="{StaticResource ComboBoxStyle}">
+                        Style="{StaticResource ComboBoxStyle}" Watermark="Страна">
                         <combobox:SfComboBox.DropDownButtonSettings>
                             <combobox:DropDownButtonSettings Width="30" Height="30">
                                 <combobox:DropDownButtonSettings.View>
@@ -151,7 +176,7 @@
                                      Style="{StaticResource FormBorderStyle}" Grid.Column="2">
                         <control:BorderlessEntry
                             x:Name="CityEntry"
-                            Placeholder="City"  Text="{Binding City, Source={Reference CountryPicker}}"
+                            Placeholder="Город"  Text="{Binding City, Source={Reference CountryPicker}}"
                             Style="{StaticResource EntryTextStyle}" />
                     </border:SfBorder>
                     <border:SfBorder
@@ -164,7 +189,7 @@
                             SelectedItem="{Binding State, Source={Reference CountryPicker}}"
                             DataSource="{Binding States, Source={Reference CountryPicker}}"
                             Style="{StaticResource ComboBoxStyle}"
-                            Watermark="State">
+                            Watermark="Область">
                             <combobox:SfComboBox.DropDownButtonSettings>
                                 <combobox:DropDownButtonSettings>
                                     <combobox:DropDownButtonSettings.View>
@@ -185,7 +210,7 @@
                 <border:SfBorder BorderColor="{Binding Source={x:Reference PhoneNoEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
                         x:Name="PhoneNoEntry"
-                        Placeholder="{Binding PhoneNumberPlaceHolder, Source={Reference CountryPicker}}"
+                        Placeholder="Номер телефона"
                             Text="{Binding PhoneNumber, Source={Reference CountryPicker}}"
                         Keyboard="Telephone" 
                         Style="{StaticResource EntryTextStyle}" >
@@ -198,8 +223,8 @@
                 <buttons:SfButton
                     HorizontalOptions="Center" Command="{Binding SubmitCommand}"
                     Style="{StaticResource SfButtonStyle}"
-                    Text="SUBMIT"
-                    WidthRequest="200" />
+                    Text="СОХРАНИТЬ И ПОЛУЧИТЬ ДАННЫЕ"
+                    WidthRequest="400" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

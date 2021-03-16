@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms.Internals;
+﻿using System;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace InteractiveContactList.Views.Forms
@@ -16,6 +17,11 @@ namespace InteractiveContactList.Views.Forms
         public SimpleSignUpPage()
         {
             InitializeComponent();
+        }
+
+        async void SimpleLoginPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SimpleLoginPage(), true);
         }
     }
 }
