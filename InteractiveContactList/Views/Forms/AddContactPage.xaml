@@ -108,37 +108,42 @@
                     Margin="0,16,0,0"
                     Style="{StaticResource HeaderLabelStyle}"
                     Text="Контактная информация" />
-                <local:ContactEmailEntry /> 
-               
+                <local:ContactEmailEntry />
+
                 <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
                         x:Name="AddressEntry"
                         Placeholder="Адрес" Text="{Binding Address}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
-                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                <border:SfBorder BorderColor="{Binding Source={x:Reference FacebookEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
-                        Placeholder="Ссылка на профиль Facebook" Text="{Binding Address}"
+                        x:Name="FacebookEntry"
+                        Placeholder="Ссылка на профиль Facebook" Text="{Binding Facebook}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
-                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                <border:SfBorder BorderColor="{Binding Source={x:Reference InstagramEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
-                        Placeholder="Ссылка на профиль Instagram" Text="{Binding Address}"
+                        x:Name="InstagramEntry"
+                        Placeholder="Ссылка на профиль Instagram" Text="{Binding Instagram}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
-                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                <border:SfBorder BorderColor="{Binding Source={x:Reference VkEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
-                        Placeholder="Ссылка на профиль Vk.com" Text="{Binding Address}"
+                        x:Name="VkEntry"
+                        Placeholder="Ссылка на профиль Vk.com" Text="{Binding Vk}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
-                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                <border:SfBorder BorderColor="{Binding Source={x:Reference LinkedInEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
-                        Placeholder="Ссылка на профиль LinkedIn" Text="{Binding Address}"
+                        x:Name="LinkedInEntry"
+                        Placeholder="Ссылка на профиль LinkedIn" Text="{Binding LinkedIn}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
-                <border:SfBorder BorderColor="{Binding Source={x:Reference AddressEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
+                <border:SfBorder BorderColor="{Binding Source={x:Reference TwitterEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=3}" Style="{StaticResource FormBorderStyle}">
                     <control:BorderlessEntry
-                        Placeholder="Ссылка на профиль Twitter" Text="{Binding Address}"
+                        x:Name="TwitterEntry"
+                        Placeholder="Ссылка на профиль Twitter" Text="{Binding Twitter}"
                         Style="{StaticResource EntryTextStyle}" />
                 </border:SfBorder>
                 <border:SfBorder

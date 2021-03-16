@@ -21,6 +21,7 @@ namespace InteractiveContactList.ViewModels.Forms
 
         #region Property
 
+        public int Id { get; set; }
         /// <summary>
         /// Gets or sets the property that bounds with an entry that gets the first name from user in the Add Contact page.
         /// </summary>
@@ -55,6 +56,28 @@ namespace InteractiveContactList.ViewModels.Forms
         /// Gets or sets the property that bounds with an entry that gets the city from user in the Add Contact page.
         /// </summary>
         public string City { get; set; }
+
+        /// <summary>
+        /// Facebook
+        /// </summary>
+        public string Facebook { get; set; }
+
+        /// <summary>
+        /// Instagram
+        /// </summary>
+        public string Instagram { get; set; }
+
+        public string Vk { get; set; }
+
+        public string LinkedIn { get; set; }
+
+        public string Twitter { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            AddContactViewModel addContactViewModel = obj as AddContactViewModel;
+            return this.Id == addContactViewModel.Id;
+        }
 
         #endregion
 

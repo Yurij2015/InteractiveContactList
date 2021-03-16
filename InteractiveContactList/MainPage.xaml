@@ -4,17 +4,15 @@
              x:Class="InteractiveContactList.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
             <Label Text="InteractiveContactList" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Интерактивный контактный лист" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Список контактов пользователя!" FontSize="16" Padding="30,0,30,0"/>
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
                         <Span Text="Интерактивный контактный лист "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
