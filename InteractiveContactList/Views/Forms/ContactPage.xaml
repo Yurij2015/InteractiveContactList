@@ -6,10 +6,12 @@
         <StackLayout>
             <Label Text="Имя" />
             <Entry Text="{Binding Path=Model.FirstName}" FontSize="Medium" />
-            <Label Text="Электронная почта" />
+            <Label Text="Фамилия" />
             <Entry Text="{Binding Path=Model.LastName}" FontSize="Medium" />
-            <Label Text="Телефон" />
+            <Label Text="Фейсбук" />
             <Entry Text="{Binding Path=Model.Facebook}" FontSize="Medium" />
+            <Label Text="Инстаграм" />
+            <Entry Text="{Binding Path=Model.Instagram}" FontSize="Medium" />
         </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
             <Button Text="Сохранить" Command="{Binding ViewModel.SaveContactCommand}" CommandParameter="{Binding Model}" />
