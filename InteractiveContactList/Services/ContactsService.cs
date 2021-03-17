@@ -11,7 +11,7 @@ namespace InteractiveContactList.Services
 {
     class ContactsService
     {
-        const string Url = "http://localhost/api/contacts/"; // обращайте внимание на конечный слеш
+        const string Url = "https://localhost:44346/api/contacts/"; // обращайте внимание на конечный слеш
         // настройки для десериализации для нечувствительности к регистру символов
         JsonSerializerOptions options = new JsonSerializerOptions
         {
