@@ -1,15 +1,15 @@
-﻿using InteractiveContactList.ViewModels.Forms;
-using System;
+﻿using InteractiveContactList.Models;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace InteractiveContactList.Services
 {
-    class ContactService
+    class ContactsService
     {
         const string Url = "http://localhost/api/contacts/"; // обращайте внимание на конечный слеш
         // настройки для десериализации для нечувствительности к регистру символов
@@ -26,52 +26,52 @@ namespace InteractiveContactList.Services
         }
 
         // получаем все контакты
-        public async Task<IEnumerable<AddContactViewModel>> Get()
+        public async Task<IEnumerable<Contact>> Get()
         {
             HttpClient client = GetClient();
             string result = await client.GetStringAsync(Url);
-            return JsonSerializer.Deserialize<IEnumerable<AddContactViewModel>>(result, options);
+            return JsonSerializer.Deserialize<IEnumerable<Contact>>(result, options);
         }
 
         // добавляем однин контакт
-        public async Task<AddContactViewModel> Add(AddContactViewModel AddContactViewModel)
+        public async Task<Contact> Add(Contact contact)
         {
             HttpClient client = GetClient();
             var response = await client.PostAsync(Url,
             new StringContent(
-            JsonSerializer.Serialize(AddContactViewModel),
+            JsonSerializer.Serialize(contact),
             Encoding.UTF8, "application/json"));
 
             if (response.StatusCode != HttpStatusCode.OK)
                 return null;
 
-            return JsonSerializer.Deserialize<AddContactViewModel>(
+            return JsonSerializer.Deserialize<Contact>(
             await response.Content.ReadAsStringAsync(), options);
         }
         // обновляем контакт
-        public async Task<AddContactViewModel> Update(AddContactViewModel AddContactViewModel)
+        public async Task<Contact> Update(Contact contact)
         {
             HttpClient client = GetClient();
             var response = await client.PutAsync(Url,
             new StringContent(
-            JsonSerializer.Serialize(AddContactViewModel),
+            JsonSerializer.Serialize(contact),
             Encoding.UTF8, "application/json"));
 
             if (response.StatusCode != HttpStatusCode.OK)
                 return null;
 
-            return JsonSerializer.Deserialize<AddContactViewModel>(
+            return JsonSerializer.Deserialize<Contact>(
             await response.Content.ReadAsStringAsync(), options);
         }
         // удаляем контакт
-        public async Task<AddContactViewModel> Delete(int id)
+        public async Task<Contact> Delete(int id)
         {
             HttpClient client = GetClient();
             var response = await client.DeleteAsync(Url + id);
             if (response.StatusCode != HttpStatusCode.OK)
                 return null;
 
-            return JsonSerializer.Deserialize<AddContactViewModel>(
+            return JsonSerializer.Deserialize<Contact>(
             await response.Content.ReadAsStringAsync(), options);
         }
     }

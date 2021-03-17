@@ -1,4 +1,5 @@
-﻿using InteractiveContactList.Views.Forms;
+﻿using InteractiveContactList.Views.ContactList;
+using InteractiveContactList.Views.Forms;
 using InteractiveContactList.Views.Navigation;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,11 @@ namespace InteractiveContactList
         async void ContactsPage(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ContactsPage(), true);
+        }
+
+        async void ContactList(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ContactList(), true);
         }
     }
 }

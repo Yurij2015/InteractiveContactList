@@ -29,6 +29,9 @@
         <Button
                 Text="Создать проект" 
                 Clicked="AddContactPage"/>
+        <Button
+                Text="Управление списком" 
+                Clicked="ContactList"/>
     </StackLayout>
 
 </ContentPage>

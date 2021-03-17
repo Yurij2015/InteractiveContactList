@@ -73,11 +73,6 @@ namespace InteractiveContactList.ViewModels.Forms
 
         public string Twitter { get; set; }
 
-        public override bool Equals(object obj)
-        {
-            AddContactViewModel addContactViewModel = obj as AddContactViewModel;
-            return this.Id == addContactViewModel.Id;
-        }
 
         #endregion
 
