@@ -4,7 +4,7 @@
              x:Class="InteractiveContactList.Views.ContactList.ContactList">
     <StackLayout>
         <Button Text="Добавить" Command="{Binding CreateContactCommand}" IsEnabled="{Binding IsLoaded}" />
-        <ListView x:Name="friendsList" ItemsSource="{Binding Friends}"
+        <ListView x:Name="contactsList" ItemsSource="{Binding Contacts}"
               SelectedItem="{Binding SelectedContact, Mode=TwoWay}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -12,8 +12,17 @@
                         <ViewCell.View>
                             <StackLayout>
                                 <Label Text="{Binding FirstName}" FontSize="Medium" />
-                                <Label Text="{Binding LastName}" FontSize="Small" />
+                                <Label Text="{Binding Twitter}" FontSize="Small" />
+                                <Label Text="{Binding Date}" FontSize="Small" />
+                                <Label Text="{Binding Gender}" FontSize="Small" />
+                                <Label Text="{Binding PhoneNumber}" FontSize="Small" />
+                                <Label Text="{Binding Address}" FontSize="Small" />
+                                <Label Text="{Binding City}" FontSize="Small" />
                                 <Label Text="{Binding Facebook}" FontSize="Small" />
+                                <Label Text="{Binding Instagram}" FontSize="Small" />
+                                <Label Text="{Binding Vk}" FontSize="Small" />
+                                <Label Text="{Binding LinkedIn}" FontSize="Small" />
+                                <Label Text="{Binding Twitter}" FontSize="Small" />
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>

@@ -25,7 +25,6 @@ namespace InteractiveContactList.ViewModels.Forms
         public ICommand DeleteContactCommand { protected set; get; }
         public ICommand SaveContactCommand { protected set; get; }
         public ICommand BackCommand { protected set; get; }
-
         public INavigation Navigation { get; set; }
 
         public bool IsBusy
@@ -73,7 +72,7 @@ namespace InteractiveContactList.ViewModels.Forms
                         Facebook = value.Facebook,
                         Instagram = value.Instagram,
                         Vk = value.Vk,
-                        LinkedIn = value.LastName,
+                        LinkedIn = value.LinkedIn,
                         Twitter = value.Twitter
 
                     };
