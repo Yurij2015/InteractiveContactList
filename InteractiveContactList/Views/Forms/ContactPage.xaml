@@ -3,32 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InteractiveContactList.Views.Forms.ContactPage">
     <StackLayout>
-        <StackLayout>
-            <Label Text="Имя" />
-            <Entry Text="{Binding Path=Model.FirstName}" FontSize="Medium" />
-            <Label Text="Фамилия" />
-            <Entry Text="{Binding Path=Model.LastName}" FontSize="Medium" />
-            <Label Text="Дата" />
-            <Entry Text="{Binding Path=Model.Date}" FontSize="Medium" />
-            <Label Text="Пол" />
-            <Entry Text="{Binding Path=Model.Gender}" FontSize="Medium" />
-            <Label Text="Номер телефона" />
-            <Entry Text="{Binding Path=Model.PhoneNumber}" FontSize="Medium" />
-            <Label Text="Адрес" />
-            <Entry Text="{Binding Path=Model.Address}" FontSize="Medium" />
-            <Label Text="Город" />
-            <Entry Text="{Binding Path=Model.City}" FontSize="Medium" />
-            <Label Text="Facebook" />
-            <Entry Text="{Binding Path=Model.Facebook}" FontSize="Medium" />
-            <Label Text="Инстаграм" />
-            <Entry Text="{Binding Path=Model.Instagram}" FontSize="Medium" />
-            <Label Text="Vk" />
-            <Entry Text="{Binding Path=Model.Vk}" FontSize="Medium" />
-            <Label Text="LinkedIn" />
-            <Entry Text="{Binding Path=Model.LinkedIn}" FontSize="Medium" />
-            <Label Text="Twitter" />
-            <Entry Text="{Binding Path=Model.Twitter}" FontSize="Medium" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Имя" />
+                <Entry Text="{Binding Path=Model.FirstName}" FontSize="Medium" TextColor="Red" />
+                <Label Text="Фамилия" />
+                <Entry Text="{Binding Path=Model.LastName}" FontSize="Medium" />
+                <Label Text="Дата" />
+                <Entry Text="{Binding Path=Model.Date}" FontSize="Medium" />
+                <Label Text="Пол" />
+                <Entry Text="{Binding Path=Model.Gender}" FontSize="Medium" />
+                <Label Text="Номер телефона" />
+                <Entry Text="{Binding Path=Model.PhoneNumber}" FontSize="Medium" />
+                <Label Text="Адрес" />
+                <Entry Text="{Binding Path=Model.Address}" FontSize="Medium" />
+                <Label Text="Город" />
+                <Entry Text="{Binding Path=Model.City}" FontSize="Medium" />
+                <Label Text="Facebook" />
+                <Entry Text="{Binding Path=Model.Facebook}" FontSize="Medium" />
+                <Label Text="Инстаграм" />
+                <Entry Text="{Binding Path=Model.Instagram}" FontSize="Medium" />
+                <Label Text="Vk" />
+                <Entry Text="{Binding Path=Model.Vk}" FontSize="Medium" />
+                <Label Text="LinkedIn" />
+                <Entry Text="{Binding Path=Model.LinkedIn}" FontSize="Medium" />
+                <Label Text="Twitter" />
+                <Entry Text="{Binding Path=Model.Twitter}" FontSize="Medium" />
+            </StackLayout>
+        </ScrollView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
             <Button Text="Сохранить" Command="{Binding ViewModel.SaveContactCommand}" CommandParameter="{Binding Model}" />
             <Button Text="Удалить" Command="{Binding ViewModel.DeleteContactCommand}" CommandParameter="{Binding Model}" />

@@ -74,7 +74,6 @@ namespace InteractiveContactList.ViewModels.Forms
                         Vk = value.Vk,
                         LinkedIn = value.LinkedIn,
                         Twitter = value.Twitter
-
                     };
                     selectedContact = null;
                     OnPropertyChanged("SelectedContact");

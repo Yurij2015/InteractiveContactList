@@ -4,15 +4,15 @@
              x:Class="InteractiveContactList.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
-            <Label Text="InteractiveContactList" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="#2196F3" Padding="10">
+            <Label Text="Interactive Contact List" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label Text="Интерактивный контактный лист" FontSize="Title" Padding="30,10,30,10"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
+        <Label Text="Интерактивный контактный лист" HorizontalTextAlignment="Center" FontSize="20" Padding="10,10,30,10" />
+        <Label FontSize="16" Padding="0,20,0,20" HorizontalTextAlignment="Center">
+            <Label.FormattedText >
                 <FormattedString>
                     <FormattedString.Spans>
-                        <Span Text="Интерактивный контактный лист "/>
+                        <Span Text="Меню управления" />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>

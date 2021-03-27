@@ -20,6 +20,16 @@ namespace InteractiveContactList.Models
         public string Vk { get; set; }
         public string LinkedIn { get; set; }
         public string Twitter { get; set; }
+        /// <summary>
+        /// Get data from socengines
+        /// </summary>
+        public string FacebookData { get; set; }
+        public string InstagramData { get; set; }
+        public string VkData { get; set; }
+        public string LinkedInData { get; set; }
+        public string TwitterData { get; set; }
+
+
         public override bool Equals(object obj)
         {
             Contact contact = obj as Contact;

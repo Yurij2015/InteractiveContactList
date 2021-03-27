@@ -10,9 +10,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout>
-                                <Label Text="{Binding FirstName}" FontSize="Medium" />
-                                <Label Text="{Binding Twitter}" FontSize="Small" />
+                            <StackLayout Padding="0 10 10 10">
+                                <Label Text="{Binding FirstName}" FontSize="Medium" TextColor="Red" />
+                                <Label Text="{Binding LastName}" FontSize="Small" />
                                 <Label Text="{Binding Date}" FontSize="Small" />
                                 <Label Text="{Binding Gender}" FontSize="Small" />
                                 <Label Text="{Binding PhoneNumber}" FontSize="Small" />
@@ -23,6 +23,11 @@
                                 <Label Text="{Binding Vk}" FontSize="Small" />
                                 <Label Text="{Binding LinkedIn}" FontSize="Small" />
                                 <Label Text="{Binding Twitter}" FontSize="Small" />
+                                <Label Text="{Binding TwitterData}" FontSize="Small" />
+                                <Label Text="{Binding InstagramData}" FontSize="Small" />
+                                <Label Text="{Binding VkData}" FontSize="Small" />
+                                <Label Text="{Binding LinkedInData}" FontSize="Small" />
+                                <Label Text="{Binding TwitterData}" FontSize="Small" />
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
