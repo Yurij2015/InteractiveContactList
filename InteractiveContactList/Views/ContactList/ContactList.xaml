@@ -10,7 +10,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Padding="0 10 10 10">
+                            <StackLayout Padding="0, 10, 10, 10">
                                 <Label Text="{Binding FirstName}" FontSize="Medium" TextColor="Red" />
                                 <Label Text="{Binding LastName}" FontSize="Small" />
                                 <Label Text="{Binding Date}" FontSize="Small" />
